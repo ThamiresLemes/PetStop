@@ -50,61 +50,61 @@
       <form action="save-stop" method="post" onsubmit="validate(event)">
         <fieldset>
           <legend>Dados</legend>
-
+          <p id="cliqueNoMapa">Clique no mapa para adicionar a localização</p>
           <div class="map-container">
             <div id="mapid"></div>
             <input type="hidden" name="lat" />
             <input type="hidden" name="lng" />
             <footer>
-              <a href="#" id="select-point">
-                Clique no mapa para adicionar a localização
+              <a href="#labelEndereco" id="select-point">
+                Clique aqui para continuar a cadastrar o ponto
               </a>
             </footer>
           </div>
 
           <div class="input-block">
-            <label for="endereco">Endereço</label>
+            <label id="labelEndereco" for="endereco">Endereço <span class="campo-obrigatorio">*</span></label>
             <input id="endereco" name="endereco" required />
           </div>
 
           <div class="input-block">
-            <label for="numero">Número</label>
-            <input id="numero" placeholder="0" name="numero" required />
+            <label for="numero">Número <span class="campo-obrigatorio">*</span></label>
+            <input id="numero" name="numero" required />
           </div>
 
           <div class="input-block">
-            <label for="bairro">Bairro</label>
+            <label for="bairro">Bairro <span class="campo-obrigatorio">*</span></label>
             <input id="bairro" name="bairro" required />
           </div>
 
           <div class="input-block">
-            <label for="cidade">Cidade</label>
+            <label for="cidade">Cidade <span class="campo-obrigatorio">*</span></label>
             <input id="cidade" name="cidade" required />
           </div>
 
           <div class="input-block">
-            <label for="estado">Estado</label>
+            <label for="estado">Estado <span class="campo-obrigatorio">*</span></label>
             <input id="estado" name="estado" required />
           </div>
 
 
           <div class="input-block">
-            <label for="ponto-referencia">Ponto de Referência <span>Máximo de 100 caracteres</span></label>
+            <label for="ponto-referencia">Ponto de Referência <span class="campo-obrigatorio">*</span> <span>Máximo de 50 caracteres</span></label>
             <textarea id="about" name="about" required></textarea>
           </div>
 
           <div class="input-block">
-            <label for="whatsapp">Número de whatsapp</label>
-            <input id="whatsapp" name="whatsapp" required />
+            <label for="whatsapp">Número de whatsapp <span class="campo-obrigatorio">*</span></label>
+            <input type="tel" inputmode="numeric" id="whatsapp" name="whatsapp" placeholder="Digite somente números. Ex: 21999999999" maxlength="11" required />
           </div>
 
           <div class="input-block images">
-            <label for="images">Foto</label>
+            <label for="images">Foto<span class="campo-obrigatorio">*</span></label>
 
             <div class="images-upload" id="images">
 
               <div class="new-upload">
-                <input name="images" type="file" required />
+                <input name="images" required />
                 <span onclick="deleteField(event)">
                   <img src="/images/remove-file.svg" alt="Remover Foto">
                 </span>
@@ -121,7 +121,7 @@
           <legend>Tipo de Ponto</legend>
 
           <div class="input-block">
-            <label for="petstop-hidratacao-alimentação">Qual ponto deseja cadastrar?</label>
+            <label for="petstop-hidratacao-alimentação">Qual ponto deseja cadastrar? <span class="campo-obrigatorio">*</span></label>
             <input type="hidden" id="pha" name="pha" value="1" required />
 
             <div class="button-select">

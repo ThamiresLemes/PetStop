@@ -76,16 +76,15 @@ function toggleSelect(event) {
 // alerta de confirmação de abastecimento
 function confirmarAbastecimento(){
   Swal.fire({
-  title: 'Deseja salvar as mudanças?',
-  showDenyButton: true,
+  title: 'Deseja cadastrar esse ponto?',
+  icon: 'warning',
   showCancelButton: true,
   cancelButtonText: 'Cancelar',
-  confirmButtonText: 'Salvar',
-  denyButtonText: `Não salvar`,
+  confirmButtonText: 'Cadastrar',
 }).then((result) => {
   /* Read more about isConfirmed, isDenied below */
   if (result.isConfirmed) {
-    Swal.fire('Salvo!', '', 'success')
+    Swal.fire('Ponto cadastrado com sucesso.!', '', 'success')
   } else if (result.isDenied) {
     Swal.fire('As alterações não foram salvas', '', 'info')
   }

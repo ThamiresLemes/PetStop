@@ -30,6 +30,14 @@ fieldset legend{
     padding-bottom: 2.4rem;
 }
 
+p#cliqueNoMapa{
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: #8fa7b3;
+    padding-bottom: 2rem;
+}
+
 .input-block + .input-block{
     margin-top: 2.4rem;
 }
@@ -40,6 +48,10 @@ fieldset legend{
     line-height: 1.5rem;
 }                                       
 
+.input-block .campo-obrigatorio{
+    color: red;
+    margin: 0;
+}
 .input-block label span{
     font-size: 1.4rem;
     color: #8fa7b3;
@@ -60,6 +72,11 @@ fieldset legend{
 .input-block input{
     height: 6.4rem;
     padding: 1.6rem 1.6rem 0;
+    margin-top: 1rem;
+}
+
+.button-select{
+    margin-top: 1rem;
 }
 
 .input-block input:valid,
