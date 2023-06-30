@@ -6,7 +6,6 @@
   "type": "module",
   "scripts": {
     "start": "nodemon src/server.js",
-    "vercel-build":"npx prisma migrate deploy"
   },
   "keywords": [],
   "author": "",
